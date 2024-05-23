@@ -19,6 +19,29 @@
     display: flex;
     gap: 30px;
 }
+.contentdev ul{
+    display: flex;
+    gap: 30px;
+    position: fixed;
+    top: -600px;
+    margin-top: 70px;
+    width: 100vw;
+    background-color: #4e6f6f;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentdev li{
+    list-style: none;
+    font-size: x-large;
+}
+
+
+
+
+
+
 .content li{
     list-style: none;
     font-size: x-large;
@@ -28,6 +51,9 @@
     text-decoration: underline;
     scale: 1.1;
     transition: 0.8s;
+}
+.hamburg{
+    display: none;
 }
 
 .home{
@@ -63,6 +89,7 @@
 }
 
 .info h1{
+    
     font-size: xxx-large;
     color: rgb(5 5 188); 
 }
@@ -132,6 +159,27 @@
 }
 .aboutcontent{
     width: 50vw;
+}
+
+/* RESUME BUTTON */
+.resumebtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resumebtn input{
+    padding: 9px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: rgb(62, 70, 236);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: xx-large;
+}
+.resumebtn input:hover{
+    background-color: #440affad;
+    transition: .5s;
 }
 
             /* SKILL SECTION */
@@ -393,6 +441,9 @@
     .content {
         display: none;
     }
+    .hamburg{
+        display: inline;
+    }
     .home {
         flex-direction: column-reverse;
         align-items: center;
@@ -447,3 +498,11 @@
     }
 }
 
+@media(max-width:312px){
+    .info h1{
+        font-size: xx-large;
+    }
+    .pcard img{
+        width: 244px;
+    }
+}
