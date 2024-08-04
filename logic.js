@@ -12,3 +12,4 @@ b.addEventListener("click",myfunction1);
 function myfunction1(){
     document.querySelector("#h").style.left="-1000px";
 }
+alert("This portfolio is under update....");
