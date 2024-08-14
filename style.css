@@ -240,6 +240,11 @@ body{
 .card img{
     width: 100px;
 }
+.cardcon{
+    .card .nextimg{
+        mix-blend-mode: multiply;
+    }
+}
 
                                                 /* PROJECT SECTION */
 
@@ -509,3 +514,4 @@ body{
         width: 244px;
     }
 }
+
