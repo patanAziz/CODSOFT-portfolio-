@@ -13,6 +13,7 @@ body{
     position: fixed;
     width: 100vw;
     display: flex;
+    z-index: 10000;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(250, 248, 246);
@@ -240,9 +241,10 @@ body{
 .card img{
     width: 100px;
 }
-.cardcon{
-    .card .nextimg{
+.cardcon {
+    .card .nextimg {
         mix-blend-mode: multiply;
+        z-index: 1;
     }
 }
 
@@ -383,17 +385,59 @@ body{
 .footer{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    line-height: 50px;
-    margin-top: 100px;
-    background-color: rgb(57, 56, 56);
-    font-size: x-large;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    background-color: #1a1a1a;
     color: white;
+    margin-top: 4rem;
 }
-.box1 h4{
-    width: 30vw;
+
+.footer .box1 {
+    max-width: 400px;
 }
+
+.footer .box1 h2 {
+    margin-bottom: 1rem;
+    color: #4a9eff;
+}
+
+.footer .box1 h4 {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer .box2 {
+    padding-left: 2rem;
+}
+
+.footer .box2 h2 {
+    margin-bottom: 1rem;
+    color: #4a9eff;
+}
+
+.footer .box2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .box2 ul li {
+    margin: 0.8rem 0;
+    color: #cccccc;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer .box2 {
+        padding-left: 0;
+    }
+}
+
 .contact{
     height: 500px;
     display: flex;
@@ -442,8 +486,9 @@ body{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-
-
+.nextimg {
+    z-index: 1;
+}
 
 @media (max-width: 687px) {
     .content {
@@ -513,5 +558,20 @@ body{
     .pcard img{
         width: 244px;
     }
+}
+
+#h {
+    position: fixed;
+    top: 0;
+    left: -10000px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3e5f5 0%, #f3e5f5 50%, #f3e5f5 100%);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.menu-open {
+    left: 0 !important;
 }
 
